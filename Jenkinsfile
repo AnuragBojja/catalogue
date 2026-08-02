@@ -8,6 +8,6 @@ def configMap = [
 if ( ! env.GIT_BRANCH.equalsIgnoreCase("main") ){
     nodejsEKSPipeline(configMap)
 }
-else{
+else {
     echo "need permision"
 }
