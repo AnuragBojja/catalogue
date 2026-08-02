@@ -5,9 +5,6 @@ def configMap = [
     component: "catalogue"
 ]
 
-if ( ! env.BRANCH_NAME.equalsIgnoreCase("main") ){
-    nodejsEKSPipeline(configMap)
-}
-else {
+if ( env.BRANCH_NAME.equalsIgnoreCase("main") ){
     echo "need permision"
 }
